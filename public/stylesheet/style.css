@@ -3,6 +3,10 @@ body {
     margin: auto;
 }
 
+h1, h2, img {
+    text-align: center;
+}
+
 .logo {
     width: 10%;
 }
