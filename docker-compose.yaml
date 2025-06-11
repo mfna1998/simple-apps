@@ -29,8 +29,6 @@ services:
   dbms:
     image: "phpmyadmin"
     restart: always
-    links:
-      - db
     ports:
       - "8001:80"
     environment:
