@@ -44,6 +44,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh'''
+                docker rm -f $(docker ps -aq)
                 docker compose up --build -d
                 '''
             }
