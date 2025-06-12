@@ -11,7 +11,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh'''
-                docker rm -f $(docker ps -aq)
                 cd apps
                 npm install
                 '''
