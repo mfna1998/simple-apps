@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh'''
+                docker rm -f $(docker ps -aq)
                 cd apps
                 npm install
                 '''
@@ -44,7 +45,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh'''
-                docker rm -f $(docker ps -aq)
                 docker compose up --build -d
                 '''
             }
