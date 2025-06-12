@@ -46,6 +46,7 @@ pipeline {
             steps {
                 sh'''
                 docker compose up --build -d
+                docker tag simple-apps-backend:latest mongooserskd/simple-apps-backend
                 '''
             }
         }
