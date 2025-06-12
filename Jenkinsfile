@@ -53,7 +53,7 @@ pipeline {
         
         stage('Backup') {
             steps {
-                 sh 'docker compose push' 
+                 sh 'docker push mongooserskd/simple-apps-backend' 
             }
         }
     }
