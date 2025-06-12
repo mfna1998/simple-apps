@@ -2,6 +2,7 @@ services:
 
   backend:
     build: ./apps
+    image: mongooserskd/simple-apps-backend
     restart: always
     links:
       - db

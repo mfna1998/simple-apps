@@ -46,14 +46,13 @@ pipeline {
             steps {
                 sh'''
                 docker compose up --build -d
-                docker tag simple-apps-backend:latest mongooserskd/simple-apps-backend
                 '''
             }
         }
         
         stage('Backup') {
             steps {
-                 sh 'docker push mongooserskd/simple-apps-backend' 
+                sh 'docker push' 
             }
         }
     }
